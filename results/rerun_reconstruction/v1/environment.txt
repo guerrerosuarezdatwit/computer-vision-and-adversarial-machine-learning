@@ -1,0 +1,12 @@
+Python 3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]
+Environment: .venv-rerun
+Original .venv: not modified
+Bootstrap pip==26.1.2
+
+attrs==26.1.0
+numpy==2.5.4
+pillow==13.0.0
+psutil==7.2.2
+pyarrow==26.0.1
+rerun-sdk==0.42.0
+typing_extensions==4.16.0

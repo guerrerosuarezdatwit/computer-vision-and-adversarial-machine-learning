@@ -1,0 +1,120 @@
+# Python environments: notebook and visualization stacks stay local.
+.venv/
+.venv-*/
+venv/
+env/
+.python-version.local
+
+# Python, notebook, test, build, and tool caches.
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+build/
+dist/
+node_modules/
+.npm/
+
+# Local machine files and temporary outputs.
+.DS_Store
+._*
+Thumbs.db
+.idea/
+.vscode/
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+/tmp/
+/temp/
+
+# Local credentials. Examples must contain placeholders only.
+.env
+.env.*
+!.env.example
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa
+id_ed25519
+credentials*.json
+service-account*.json
+*service_account*.json
+
+# Downloadable model weights: keep local files, never commit them accidentally.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+*.gguf
+/weights/
+/models/
+/checkpoints/
+pytorch_model*.bin
+
+# Original images await provenance/rights and visual privacy review.
+# Notebook outputs can embed these images too; see docs/PUBLICATION_CHECKLIST.md.
+/assets/
+/data/
+/datasets/
+/private_data/
+/local_data/
+/notebooks/*.png
+
+# Additional per-machine credentials and experiment caches.
+.netrc
+_netrc
+.credentials/
+secrets/
+.huggingface/
+.torch/
+.jupyter/
+/runs/
+Desktop.ini
+
+# Recordings and videos may embed original photos or private screen content.
+*.rrd
+*.rbl
+*.mp4
+*.mov
+*.webm
+*.avi
+*.gif
+
+# Keep historical results on disk. Only explicitly selected small reference
+# artifacts and documentation are candidates for tracking.
+/results/*
+!/results/canonical_reconstruction/
+/results/canonical_reconstruction/*
+!/results/canonical_reconstruction/v1/
+
+!/results/rerun_reconstruction/
+/results/rerun_reconstruction/*
+!/results/rerun_reconstruction/v1/
+/results/rerun_reconstruction/v1/*
+!/results/rerun_reconstruction/v1/README.md
+!/results/rerun_reconstruction/v1/validation.json
+!/results/rerun_reconstruction/v1/environment.txt
+
+!/results/triangulation_diagnostics/
+/results/triangulation_diagnostics/*
+!/results/triangulation_diagnostics/README.md
+!/results/triangulation_diagnostics/points.csv
+!/results/triangulation_diagnostics/summary.json
+!/results/triangulation_diagnostics/image_sha256.json
+!/results/triangulation_diagnostics/control_cases.json

@@ -1,0 +1,152 @@
+{
+  "sdk_version": "0.42.0",
+  "python": "3.12.13",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "recording": "deku_reconstruction.rrd",
+  "recording_sha256": "cb3625a863f807c09ee8a0eb99a181576f34b0ed4a0f620cad82512a631db4ad",
+  "recording_bytes": 3964235,
+  "canonical_files_sha256": {
+    "metrics.csv": "eeb626404461210857b58cc9ff5e9c3a81c925a276b083181e1d62a633de1c22",
+    "README.md": "0df448a0c37e795825eba4732ad3824f5282b79f6a335465e947b8af7098e2c9",
+    "points.npz": "5e4748e1f30a4b5e2ffa0ffc3e9467f4f1c8012987d5b39bff1462e9b9f2ca25",
+    "manifest.json": "4fe46dfbde9405e2d8d29543f722a3a1804973e5cd7875aefdb7c5aeb8f1da2f",
+    "cameras.json": "a4be6ac7668e6d9d0b6fedf7e723b74de92c3423201d188f92081d53156d7642",
+    "observations.csv": "5b4382f405083202fdab5d8c8d154e9df6db1220a45711f075769f7aad34f8c4"
+  },
+  "images_sha256": {
+    "data/view_01.jpg": "d98784467917eeeea585f69938e17013fac59761e9ce8e82814fdbd8e7cd54ac",
+    "data/view_02.jpg": "931f0f121a72ca1cc64a5de12a3db1170d99daa9c30762e09633695e533e79c4",
+    "data/view_03.jpg": "6f326b1dd62fd35aef34a0316e9fe288faf8d9e5286731b796b92588605acd2b",
+    "data/view_04.jpg": "c36c7d21a36da062435396d51b61e6eb998fadcc72a1f6e80f703954e9c74590",
+    "data/view_05.jpg": "5e5f17e498606a0b07ca763f5acbc7d8b0138e34aeede091c867eecbdb286f93",
+    "data/view_06.jpg": "2efce64bc9b740ed456cef759c467706385cefac62fe4f552afd8b4d6acf8f75",
+    "data/view_07.jpg": "34be079b516997506f764d51072978d3787a23349579a9bd7a4f4c2fd12e3ac9",
+    "data/view_08.jpg": "48e92589aadcfaf28ec8d740ca5487f59acf5d050666fd224325c6cfece1ab36",
+    "data/view_09.jpg": "8461a6bcad68581bc5af779fbb6d4ad6a1fa3a8cec6609faeaf2dfc829acd37e",
+    "data/view_10.jpg": "60d35bfc27b6fc8a072024ffe986dba17bf13eaa814c4e0a23dc107685963f91",
+    "data/view_11.jpg": "22c9977e602ce11a13cd0ce5af2ed27a2a78b041fe58a6364ebd4c7cea597138",
+    "data/view_12.jpg": "bb128933ae4a0fe5536354e2f7b96892bddca1e54428f66dda18d1b70f1d048a"
+  },
+  "canonical_unchanged": true,
+  "original_images_unchanged": true,
+  "validation": {
+    "stages": [
+      {
+        "stage": 0,
+        "rgb": 188,
+        "accepted": 188,
+        "rejected": 0
+      },
+      {
+        "stage": 1,
+        "rgb": 188,
+        "accepted": 188,
+        "rejected": 0
+      },
+      {
+        "stage": 2,
+        "rgb": 188,
+        "accepted": 188,
+        "rejected": 0
+      },
+      {
+        "stage": 3,
+        "rgb": 301,
+        "accepted": 291,
+        "rejected": 10
+      },
+      {
+        "stage": 4,
+        "rgb": 386,
+        "accepted": 376,
+        "rejected": 10
+      }
+    ],
+    "cameras": 4,
+    "embedded_original_images": 4,
+    "final_point_ids": 386,
+    "unique_positions": 364,
+    "original_rgb_exact": true,
+    "original_xyz_exact": true,
+    "all_observations_logged": 897,
+    "camera_projection_tolerance_px": 0.001,
+    "high_error_final_association_point_ids": [
+      62,
+      140,
+      161,
+      162,
+      192,
+      232,
+      295
+    ]
+  },
+  "environment": {
+    "rerun-sdk": "0.42.0",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "pyarrow": "26.0.1",
+    "attrs": "26.1.0",
+    "psutil": "7.2.2",
+    "typing_extensions": "4.16.0"
+  },
+  "visual_inspection": "Not performed: native app launch timed out twice through the computer-use bridge; browser access host unavailable.",
+  "limitations": [
+    "Approximate shared intrinsics f=0.9*900; no calibration, distortion model, or bundle adjustment.",
+    "Only Views 03-06 have poses. The other eight images remain unregistered.",
+    "Duplicate positions and all rejected point IDs are preserved; counts refer to IDs, not unique landmarks.",
+    "Descriptor propagation was not geometrically validated by the original SfM algorithm.",
+    "Observation consistency flags are post-hoc checks, not new inlier decisions or ground truth.",
+    "PnP provenance covers retained dictionaries, not a complete history of RANSAC trials or discarded correspondences.",
+    "Birth observations overwritten in final dictionaries are retained but marked inactive.",
+    "The 107 originally rejected expansion candidates have no original map IDs and are not exported as map points.",
+    "Depth is in arbitrary seed-baseline units. Low reprojection error does not establish reliable depth.",
+    "Original-resolution K and pixels use conventional linear scaling; no recalibration or half-pixel correction is applied.",
+    "Observation stages reflect actual notebook chronology; camera 06 is registered before either map expansion.",
+    "Fixed diagnostic classifications, not interactive threshold recomputation.",
+    "Metrics table contains birth events over the recording; it is not a current-stage point counter.",
+    "Semantic click-to-ID synchronization across arbitrary views is not implemented."
+  ],
+  "tests": {
+    "rerun_tests": 8,
+    "rerun_test_failures": 0,
+    "test_command": ".venv-rerun/bin/python -B -m unittest discover -s tests -p test_rerun_reconstruction.py -v",
+    "historical_python_tests_passed": 17,
+    "historical_python_tests_failed": 1,
+    "historical_python_tests_skipped": 8,
+    "historical_failure": "Canonical historical-file checksum test: notebook 12 differs from the milestone 1 reference; that difference predates this task.",
+    "native_rrd_verify": "1 file verified without error"
+  },
+  "preservation": {
+    "canonical_and_all_original_images_unchanged": true,
+    "original_venv_file_metadata_unchanged": true,
+    "original_venv_files_checked": 55009,
+    "observed_changes_since_task_start": [
+      {
+        "path": "notebooks/13_multiview_3d_reconstruction.ipynb",
+        "before": "98eb3286f92be03c4e7ab53fa3cad918fcd783f0d89e4209a0bc65688566a763",
+        "after": "1a0534624a8bf78f36ed74a7339bf7dea29668cfdb4fe0a9c65c8126552284f7"
+      }
+    ],
+    "differences_from_milestone1_reference": [
+      {
+        "path": "notebooks/12_epipolar_geometry.ipynb",
+        "milestone1": "5b117bc1458650a8c86d45f670dcc24558c37fb4199bace59f378ced71a996ed",
+        "at_milestone2_start": "8eb3d756b9c8427863c96f52018e6a5b5283ca29e092e9923552d0559c3a5d4e",
+        "current": "8eb3d756b9c8427863c96f52018e6a5b5283ca29e092e9923552d0559c3a5d4e"
+      },
+      {
+        "path": "notebooks/13_multiview_3d_reconstruction.ipynb",
+        "milestone1": "98eb3286f92be03c4e7ab53fa3cad918fcd783f0d89e4209a0bc65688566a763",
+        "at_milestone2_start": "98eb3286f92be03c4e7ab53fa3cad918fcd783f0d89e4209a0bc65688566a763",
+        "current": "1a0534624a8bf78f36ed74a7339bf7dea29668cfdb4fe0a9c65c8126552284f7"
+      },
+      {
+        "path": "notebooks/image_processing.ipynb",
+        "milestone1": "5ddbadb019bce95db9077d17a4c8df04995ad5d056a1ded21bd1b21cc12a8069",
+        "at_milestone2_start": null,
+        "current": null
+      }
+    ],
+    "note": "Exporter and tests do not write notebooks. Observed notebook changes were not reverted; origin is not established."
+  }
+}

@@ -1,0 +1,23 @@
+# Predictable source checkouts on macOS and Windows.
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Frozen scientific references must retain their actual bytes, including the
+# original CSV line endings. Canonical manifests contain SHA-256 payload hashes.
+# Keep these rules AFTER the general source/documentation rules.
+*.ipynb -text
+/results/** -text
+/data/** -text
+/assets/** -text
+*.npz binary
+*.rrd binary
+*.rbl binary
+*.pt binary
+*.pth binary
+*.safetensors binary

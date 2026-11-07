@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.0.0",
+  "export_version": "v1",
+  "scene": "Deku",
+  "created_at_utc": "2026-11-06T16:33:17.356527+00:00",
+  "point_count": 386,
+  "registered_camera_count": 4,
+  "observation_count": 897,
+  "diagnostic_accepted_count": 376,
+  "diagnostic_thresholds": {
+    "min_angle": 2.0,
+    "max_error": 3.0,
+    "max_depth_baselines": 10.0,
+    "check_associations": false
+  },
+  "coordinate_convention": "X_camera = R @ X_world + t; world is View 03; right-handed RDF; arbitrary scale",
+  "point_array_schema": {
+    "point_ids": {
+      "shape": [
+        386
+      ],
+      "dtype": "int64"
+    },
+    "xyz": {
+      "shape": [
+        386,
+        3
+      ],
+      "dtype": "float32"
+    },
+    "rgb": {
+      "shape": [
+        386,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "stage": {
+      "shape": [
+        386
+      ],
+      "dtype": "int64"
+    }
+  },
+  "rgb_encoding": "uint8 RGB [0,255]; rgb.astype(float64)/255 equals source global_colors exactly",
+  "stages": [
+    {
+      "stage": 0,
+      "name": "seed_03_04",
+      "point_count": 188,
+      "registered_camera_ids": [
+        3,
+        4
+      ]
+    },
+    {
+      "stage": 1,
+      "name": "register_camera_05",
+      "point_count": 188,
+      "registered_camera_ids": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "register_camera_06",
+      "point_count": 188,
+      "registered_camera_ids": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "expand_04_05",
+      "point_count": 301,
+      "registered_camera_ids": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "expand_05_06",
+      "point_count": 386,
+      "registered_camera_ids": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "images": [
+    {
+      "path": "data/view_01.jpg",
+      "sha256": "d98784467917eeeea585f69938e17013fac59761e9ce8e82814fdbd8e7cd54ac",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_02.jpg",
+      "sha256": "931f0f121a72ca1cc64a5de12a3db1170d99daa9c30762e09633695e533e79c4",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_03.jpg",
+      "sha256": "6f326b1dd62fd35aef34a0316e9fe288faf8d9e5286731b796b92588605acd2b",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_04.jpg",
+      "sha256": "c36c7d21a36da062435396d51b61e6eb998fadcc72a1f6e80f703954e9c74590",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_05.jpg",
+      "sha256": "5e5f17e498606a0b07ca763f5acbc7d8b0138e34aeede091c867eecbdb286f93",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_06.jpg",
+      "sha256": "2efce64bc9b740ed456cef759c467706385cefac62fe4f552afd8b4d6acf8f75",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_07.jpg",
+      "sha256": "34be079b516997506f764d51072978d3787a23349579a9bd7a4f4c2fd12e3ac9",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_08.jpg",
+      "sha256": "48e92589aadcfaf28ec8d740ca5487f59acf5d050666fd224325c6cfece1ab36",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_09.jpg",
+      "sha256": "8461a6bcad68581bc5af779fbb6d4ad6a1fa3a8cec6609faeaf2dfc829acd37e",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_10.jpg",
+      "sha256": "60d35bfc27b6fc8a072024ffe986dba17bf13eaa814c4e0a23dc107685963f91",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_11.jpg",
+      "sha256": "22c9977e602ce11a13cd0ce5af2ed27a2a78b041fe58a6364ebd4c7cea597138",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "path": "data/view_12.jpg",
+      "sha256": "bb128933ae4a0fe5536354e2f7b96892bddca1e54428f66dda18d1b70f1d048a",
+      "width": 1152,
+      "height": 1536
+    }
+  ],
+  "environment": {
+    "python": "3.10.5",
+    "platform": "Darwin",
+    "architecture": "arm64",
+    "packages": {
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "Pillow": "12.3.0",
+      "plotly": "7.1.0",
+      "matplotlib": "3.10.9"
+    }
+  },
+  "reproduction": {
+    "source_notebook": "results/triangulation_diagnostics/original_13_multiview_3d_reconstruction.ipynb",
+    "notebook_algorithm": "unchanged; original code cells in order; historical pip cell skipped; displays suppressed",
+    "random_seed": "not explicitly set by historical notebook; RNG behavior preserved",
+    "metrics": "byte-for-byte copy of historical points.csv after comparison with replay",
+    "protected_files_sha256": {
+      "notebooks/01_fgsm_attack.ipynb": "5116dccf92bbe6498b7a9f2836e937704337c91807f071627d76c43f3ad30a8f",
+      "notebooks/02_pgd_attack.ipynb": "8f93c75526c81f16322123bbfe43d9bc10f3bb6a394909c6fe9a9923576d26cb",
+      "notebooks/03_transferability.ipynb": "ed1576136286408eac6435687b25bd748a505f250e1273f0f8f9fa8af0959bcf",
+      "notebooks/04_adversarial_patch_eot.ipynb": "8e9442e4ea9e4e238e3dace6425e00f3e15b82cf88526e6f10a0f89991c3d24e",
+      "notebooks/05_clip_vlm_attack.ipynb": "bb79f7a1d8a3059715685d427f4c022d2bdb0f1eb8be73b18d5168019abe93fe",
+      "notebooks/06_yolo_object_detection.ipynb": "040549a74b393dfcdc6a3969e8251fa44be96591df0618224e9b637496d49cca",
+      "notebooks/07_image_segmentation.ipynb": "99a8960b9969fd3baed2c879552cbdee8b2e35716d09614559f150078680e895",
+      "notebooks/08_depth_estimation.ipynb": "f81cb9e6eadf13b0ac484bb5da89f63e6c9343e64cde5fb6382a6e83bcef27c2",
+      "notebooks/09_computer_vision_geometry.ipynb": "fa839756de42807dd5eaa9e6a6b48c81573b222cf1c9ac6bb0049c0b77f32a31",
+      "notebooks/10_3d_point_clouds.ipynb": "4f14572d48bc4b93fbac025973896baf399d391e8225046a8ce647d31b8909ef",
+      "notebooks/11_feature_matching.ipynb": "78f2415a1c046b84f63bf0d9dd9d0fe8abdf660c6c41d59cbf5987bde97ef309",
+      "notebooks/12_epipolar_geometry.ipynb": "5b117bc1458650a8c86d45f670dcc24558c37fb4199bace59f378ced71a996ed",
+      "notebooks/13_multiview_3d_reconstruction.ipynb": "98eb3286f92be03c4e7ab53fa3cad918fcd783f0d89e4209a0bc65688566a763",
+      "notebooks/image_processing.ipynb": "5ddbadb019bce95db9077d17a4c8df04995ad5d056a1ded21bd1b21cc12a8069",
+      "notebooks/multiview_geometric_connectivity.png": "4d6f6d6963a3bc7bcfe186eee21e0100bf48773ded0d4d5d082ddbb559081f37",
+      "notebooks/sam_b.pt": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "notebooks/yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+      "data/view_01.jpg": "d98784467917eeeea585f69938e17013fac59761e9ce8e82814fdbd8e7cd54ac",
+      "data/view_02.jpg": "931f0f121a72ca1cc64a5de12a3db1170d99daa9c30762e09633695e533e79c4",
+      "data/view_03.jpg": "6f326b1dd62fd35aef34a0316e9fe288faf8d9e5286731b796b92588605acd2b",
+      "data/view_04.jpg": "c36c7d21a36da062435396d51b61e6eb998fadcc72a1f6e80f703954e9c74590",
+      "data/view_05.jpg": "5e5f17e498606a0b07ca763f5acbc7d8b0138e34aeede091c867eecbdb286f93",
+      "data/view_06.jpg": "2efce64bc9b740ed456cef759c467706385cefac62fe4f552afd8b4d6acf8f75",
+      "data/view_07.jpg": "34be079b516997506f764d51072978d3787a23349579a9bd7a4f4c2fd12e3ac9",
+      "data/view_08.jpg": "48e92589aadcfaf28ec8d740ca5487f59acf5d050666fd224325c6cfece1ab36",
+      "data/view_09.jpg": "8461a6bcad68581bc5af779fbb6d4ad6a1fa3a8cec6609faeaf2dfc829acd37e",
+      "data/view_10.jpg": "60d35bfc27b6fc8a072024ffe986dba17bf13eaa814c4e0a23dc107685963f91",
+      "data/view_11.jpg": "22c9977e602ce11a13cd0ce5af2ed27a2a78b041fe58a6364ebd4c7cea597138",
+      "data/view_12.jpg": "bb128933ae4a0fe5536354e2f7b96892bddca1e54428f66dda18d1b70f1d048a",
+      "assets/dog.jpeg": "22eb0a948d202d6a6f4676b840e38d96a69469e7003f5c3051ed7929afe53ac2",
+      "assets/multiview_left.jpeg": "01c89aed94ece3df78f58d44c5c2b761b157f6dd7053dc04a99d64e3a752d1b2",
+      "assets/multiview_right.jpeg": "85d54f1d917e65560f699ef39e20d13e1549d88582e4de7572e8630fd57b664a",
+      "assets/street.webp": "e658b83c2039ecc84e8c5e9152cf6a5ec881796bc6cbdc0bb0e68325e8bd8dfd",
+      "results/REPOSITORY_AUDIT.md": "79292e810c46aa2324ac42ac9a0502a899e2788d419f389737d5b76df320e0fe",
+      "results/dog_fgsm.png": "e0598a32993c5425599171f0c48f82d5be674f47628ec09c8199c54e91783ce8",
+      "results/dog_pgd.png": "baa535211d32c1b9dcffc83874246cea5d9ab2b8f56f98a7385baa244982c64a",
+      "results/dog_pgd_targeted.png": "62ec6cd8e20da186029085be63560cf903aa75448a1b5176636fd3e56e59639d",
+      "results/eot_translation_robustness.png": "1d1d1968f67d72e14fc4cf3a89d0d69e2b7d522cb96f5f5ce247835085ea4663",
+      "results/targeted_pgd_quantized.png": "e94e42a8be568eec19fed725a41605048b65b72b1a28c114cd79f6a39c90041c",
+      "results/triangulation_diagnostics/README.md": "9c1ca4b9aed77ba095632167680f544853f2b39e5d95336fd42efa1ab7305703",
+      "results/triangulation_diagnostics/control_cases.json": "701ad1deacf148a1e8b01ec41bfe88b2fd9671e21a7cf095fb88509bdae13316",
+      "results/triangulation_diagnostics/diagnostics.html": "d773a18d63e12e37b78376361d30da0eb4bc0ff50b54507d5b48027734f349a9",
+      "results/triangulation_diagnostics/image_sha256.json": "6a35f21ddbd3c7821a0c2a9383cd4a5adca85e296ab3bf314aee33f24f5c581a",
+      "results/triangulation_diagnostics/original_13_multiview_3d_reconstruction.ipynb": "1a0534624a8bf78f36ed74a7339bf7dea29668cfdb4fe0a9c65c8126552284f7",
+      "results/triangulation_diagnostics/points.csv": "eeb626404461210857b58cc9ff5e9c3a81c925a276b083181e1d62a633de1c22",
+      "results/triangulation_diagnostics/summary.json": "2fe40e0d3f2faf3c0cecbe6853ad613c4ac95b826986597f03bc15108c14b644"
+    },
+    "exporter_source_sha256": {
+      "src/canonical_reconstruction.py": "77830a783b261368104d3246599b5aac382a061471497392dbd0fa29f8d9937d",
+      "scripts/export_canonical_reconstruction.py": "24f6803f918f9235af3393ea436c15d8142d2cd48486824f6c4dd0ce0031e2a2",
+      "src/triangulation_diagnostics.py": "cffe8df18486e08c1e18157a561b3622632420855f48d7dd0d091a59e3cb99a4"
+    }
+  },
+  "source_comparison": {
+    "xyz_exact_match": true,
+    "rgb_normalization_exact_roundtrip": true,
+    "camera_centers_match_historical_variables": true,
+    "max_metric_absolute_difference": 0.0,
+    "point_ids_preserved": true,
+    "source_state_unchanged": true
+  },
+  "anomalies": {
+    "duplicate_position_groups": [
+      [
+        14,
+        15
+      ],
+      [
+        49,
+        50,
+        51
+      ],
+      [
+        57,
+        58
+      ],
+      [
+        65,
+        66
+      ],
+      [
+        67,
+        68
+      ],
+      [
+        78,
+        79
+      ],
+      [
+        100,
+        101
+      ],
+      [
+        121,
+        122
+      ],
+      [
+        124,
+        125
+      ],
+      [
+        175,
+        176
+      ],
+      [
+        183,
+        184
+      ],
+      [
+        195,
+        196
+      ],
+      [
+        203,
+        204
+      ],
+      [
+        205,
+        206
+      ],
+      [
+        211,
+        212
+      ],
+      [
+        230,
+        231
+      ],
+      [
+        261,
+        262
+      ],
+      [
+        312,
+        313
+      ],
+      [
+        317,
+        318
+      ],
+      [
+        325,
+        326
+      ],
+      [
+        331,
+        332
+      ]
+    ],
+    "unique_position_count": 364,
+    "duplicate_extra_id_count": 22,
+    "diagnostic_rejected_point_ids": [
+      191,
+      193,
+      194,
+      195,
+      196,
+      202,
+      297,
+      298,
+      299,
+      300
+    ],
+    "high_error_final_association_point_ids": [
+      62,
+      140,
+      161,
+      162,
+      192,
+      232,
+      295
+    ],
+    "max_final_association_error_px": 540.9044871112978,
+    "inactive_birth_observation_ids": [
+      582,
+      597,
+      598,
+      674,
+      688
+    ],
+    "historical_point_birth_length": 188,
+    "canonical_stage_length": 386,
+    "original_expansion_rejected_candidates": 107
+  },
+  "limitations": [
+    "Approximate shared intrinsics f=0.9*900; no calibration, distortion model, or bundle adjustment.",
+    "Only Views 03-06 have poses. The other eight images remain unregistered.",
+    "Duplicate positions and all rejected point IDs are preserved; counts refer to IDs, not unique landmarks.",
+    "Descriptor propagation was not geometrically validated by the original SfM algorithm.",
+    "Observation consistency flags are post-hoc checks, not new inlier decisions or ground truth.",
+    "PnP provenance covers retained dictionaries, not a complete history of RANSAC trials or discarded correspondences.",
+    "Birth observations overwritten in final dictionaries are retained but marked inactive.",
+    "The 107 originally rejected expansion candidates have no original map IDs and are not exported as map points.",
+    "Depth is in arbitrary seed-baseline units. Low reprojection error does not establish reliable depth.",
+    "Original-resolution K and pixels use conventional linear scaling; no recalibration or half-pixel correction is applied.",
+    "Observation stages reflect actual notebook chronology; camera 06 is registered before either map expansion."
+  ],
+  "artifacts": {
+    "points.npz": {
+      "sha256": "5e4748e1f30a4b5e2ffa0ffc3e9467f4f1c8012987d5b39bff1462e9b9f2ca25",
+      "bytes": 6679
+    },
+    "cameras.json": {
+      "sha256": "a4be6ac7668e6d9d0b6fedf7e723b74de92c3423201d188f92081d53156d7642",
+      "bytes": 10704
+    },
+    "observations.csv": {
+      "sha256": "5b4382f405083202fdab5d8c8d154e9df6db1220a45711f075769f7aad34f8c4",
+      "bytes": 206298
+    },
+    "metrics.csv": {
+      "sha256": "eeb626404461210857b58cc9ff5e9c3a81c925a276b083181e1d62a633de1c22",
+      "bytes": 120651
+    }
+  }
+}

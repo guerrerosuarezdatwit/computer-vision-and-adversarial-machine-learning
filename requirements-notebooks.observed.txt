@@ -1,0 +1,21 @@
+# Observed notebook environment, 2026-11-06: CPython 3.10.5, macOS ARM64.
+# This direct-dependency snapshot is NOT a complete lockfile or a validated
+# clean-install recipe. Do not use it to upgrade the preserved .venv.
+# Fresh setup and the complete notebook curriculum still require validation.
+numpy==1.26.4
+opencv-python==4.11.0.86
+torch==2.13.0
+torchvision==0.28.0
+transformers==5.16.1
+ultralytics==8.4.137
+plotly==7.1.0
+scipy==1.15.3
+Pillow==12.3.0
+scikit-learn==1.7.2
+matplotlib==3.10.9
+certifi==2026.7.22
+nbformat==5.11.1
+nbclient==0.11.0
+jupyterlab==4.6.3
+ipywidgets==8.1.9
+ipykernel==7.3.0

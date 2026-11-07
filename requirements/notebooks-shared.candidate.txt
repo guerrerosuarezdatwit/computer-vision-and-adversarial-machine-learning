@@ -1,0 +1,19 @@
+# CPython 3.12 candidate for macOS ARM64 and Windows x86-64; NOT INSTALL-TESTED.
+# Install the platform-specific torch/torchvision pair first, then this file.
+# Direct pins derived from the observed Mac stack; NOT a transitive lockfile.
+# Keep Rerun/NumPy 2 in its separate visualization environment.
+numpy==1.26.4
+opencv-python==4.11.0.86
+transformers==5.16.1
+ultralytics==8.4.137
+plotly==7.1.0
+scipy==1.15.3
+Pillow==12.3.0
+scikit-learn==1.7.2
+matplotlib==3.10.9
+certifi==2026.7.22
+nbformat==5.11.1
+nbclient==0.11.0
+jupyterlab==4.6.3
+ipywidgets==8.1.9
+ipykernel==7.3.0
