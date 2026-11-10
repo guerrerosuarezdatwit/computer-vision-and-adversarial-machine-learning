@@ -17,13 +17,14 @@ and explored with a Rerun proof of concept.
 | Canonical reconstruction v1 | Validated snapshot with 386 original point IDs, four registered cameras, RGB, observations, provenance and geometric metrics. |
 | Rerun prototype v1 | Recording with exact source XYZ/RGB, original camera images, diagnostic layers and a five-stage timeline; eight SDK readback tests passed in milestone 2. |
 | Visual experience | Working prototype reported by the project owner; automated on-screen review was unavailable during milestone 2. |
-| GitHub foundation | Documentation and an explicit ignore policy prepared; no publication, commit, CI badge, or release is implied. |
+| GitHub foundation | The first local foundation commit exists and an `origin` remote is configured. The next implementation changes are under review; no Windows runtime certification, CI badge or release is implied. |
 
-The next hosting target is a **private** GitHub repository shared between an
-M1 Pro Mac (MPS) and a Windows RTX 4060 computer (CUDA). Local Git initialization
-and staging of the conservative 42-file selection are authorized; the first
-commit, remote creation and publication require separate approval. Review the
-[private-repository checklist](docs/github_publication_checklist.md) before those actions.
+The project owner reports an existing **private** GitHub repository for sharing
+development between an M1 Pro Mac (MPS) and a Windows RTX 4060 computer (CUDA).
+The second-commit staging proposal covers Research Lab v0.2 and Experiment 02;
+staging, committing and pushing remain separate approval steps. Local review
+does not independently verify GitHub visibility or remote branch contents. See
+the [private-repository checklist](docs/github_publication_checklist.md).
 
 Start with [macOS setup](docs/setup_macos.md), [Windows setup](docs/setup_windows.md),
 [the two-computer workflow](docs/development_workflow.md), and
@@ -113,6 +114,15 @@ stage 4: expand 05–06       386 IDs, 4 cameras
 Read the [portfolio case study](docs/PORTFOLIO.md),
 [canonical schema](results/canonical_reconstruction/v1/README.md), and
 [Rerun reproduction guide](results/rerun_reconstruction/v1/README.md).
+
+The [Research Lab v0.2 inspection guide](docs/rerun_inspection_v02.md) describes
+the new ID-indexed 2D/3D recording, observed-versus-projected markers, final-map
+association status, verified residual examples and interaction limitations.
+Its private generated recording is separate from the preserved v0.1 artifact.
+The [Experiment 02 report](docs/experiment_02_track_verification.md) compares
+propagation verification thresholds on frozen final poses. The owner reports
+visual inspection of both developments on macOS; Windows runtime/rendering and
+controlled incremental SfM replay remain future validation work.
 
 ## Explore the local Rerun prototype
 

@@ -129,20 +129,20 @@ correct reconstruction. Low reprojection error does not establish reliable depth
 """
 
 
-def log_camera(rec, data, camera):
+def log_camera(rec, data, camera, *, static=False):
     import rerun as rr
     cid = camera["camera_id"]
     path = f"/world/cameras/view_{cid:02d}"
     T = np.array(camera["T_camera_to_world"])
     rec.log(path, rr.Transform3D(mat3x3=T[:3, :3], translation=T[:3, 3],
                                 relation=rr.TransformRelation.ParentFromChild),
-            rr.TransformAxes3D(.2), rr.AnyValues(camera_id=cid))
+            rr.TransformAxes3D(.2), rr.AnyValues(camera_id=cid), static=static)
     size = camera["original_size"]
     rec.log(path + "/image", rr.Pinhole(image_from_camera=camera["K_original"],
                                        resolution=[size["width"], size["height"]],
                                        camera_xyz=rr.ViewCoordinates.RDF,
                                        image_plane_distance=.28),
-            rr.EncodedImage(path=data["root"] / camera["image_path"]))
+            rr.EncodedImage(path=data["root"] / camera["image_path"]), static=static)
 
 
 def log_evidence(rec, data, camera, stage):
